@@ -1,7 +1,7 @@
 import React from 'react'
 import './collection-item.style.scss'
 
-function CollectionItem({id, name, price , image}) {
+function CollectionItem({name, price , image}) {
     return (
         <div className="collection-item">
             <div

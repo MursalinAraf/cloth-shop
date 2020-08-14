@@ -6,10 +6,7 @@ import './homepage.style.scss'
 function HomePage() {
     return (
         <div className="homepage">
-
           <Directory />
-          
-
         </div>
     )
 }
