@@ -36,6 +36,7 @@ export default class SignIn extends Component {
     
         try {
           await auth.signInWithEmailAndPassword(email, password);
+          alert(`Great! Now You Are Successfully Logged In`)
           this.setState({ email: '', password: '' });
         } catch (error) {
           console.log(error);
