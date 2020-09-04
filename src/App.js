@@ -9,6 +9,7 @@ import SignInUp from './pages/sign-in-up/sign-in-up.component';
 import {auth, CreateUserProfileDocument} from './firebase/firebase.utils'
 import {connect} from 'react-redux'
 import {setCurrentUser} from './redux/user/user.actions'
+import collectionPage from './pages/collection/collection.component';
 
  class App extends Component {
 
@@ -47,6 +48,7 @@ import {setCurrentUser} from './redux/user/user.actions'
       <Route exact path="/" component = {HomePage} />
       <Route exact path="/shop" component = {ShopPage} />
       <Route exact path="/checkout" component = {CheckOutPage} />
+      <Route exact path="/shop/:collectionId" component = {collectionPage} />
       <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />) : <SignInUp />} />
       </div>
     )
